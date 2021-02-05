@@ -721,22 +721,24 @@
                 if (!$(e.target).closest('.navbar-collapse').length &&
                     !$(e.target).is('.navbar-collapse') &&
                     menu_opened === true) {
-                    $('.navbar-collapse').collapse('toggle');
+                    $('.navbar-collapse').removeClass('show');
                     $('.navbar-toggler').removeClass('change');
                     $('body').removeClass('_overHidden');
                 }
             });
         });
-        //menu fixed js code
-        jQuery(window).scroll(function() {
-            var window_top = $(window).scrollTop() + 1;
-            if (window_top > 50) {
-                jQuery('._header').addClass('_menu_fixed animated fadeInDown');
-            } else {
-                jQuery('._header').removeClass('_menu_fixed animated fadeInDown');
-            }
-        });
+       //menu fixed js code
+jQuery(window).scroll(function() {
+    var window_top = $(window).scrollTop() + 1;
+    if (window_top > 50) {
+        jQuery('._header').addClass('_menu_fixed animated fadeInDown');
+    } else {
+        jQuery('._header').removeClass('_menu_fixed animated fadeInDown');
+    }
+});
     </script>
+    
+
     
 <!---------- Mobil Nav end ------------>
     
